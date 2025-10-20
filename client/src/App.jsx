@@ -6,6 +6,7 @@ import RemindersPage from './pages/RemindersPage';
 import CategoriesPage from './pages/CategoriesPage';
 import RecentActivityPage from './pages/RecentActivityPage';
 import LoginPage from './pages/LoginPage';
+import TailwindTest from './TailwindTest';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/reminders" element={<RemindersPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/recent" element={<RecentActivityPage />} />
+        <Route path="/test-tailwind" element={<TailwindTest />} />
       </Routes>
     </Router>
   );
