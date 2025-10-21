@@ -15,6 +15,10 @@ export default function NotesPage() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
+      {/* Debug indicator */}
+      <div className="bg-green-100 border border-green-300 text-green-800 px-4 py-2 rounded-lg mb-4 text-center font-medium">
+        📍 You are currently on the <strong>NOTES PAGE</strong> - Use the navigation above to go to Dashboard, Reminders, etc.
+      </div>
       <div className="flex justify-between items-center mb-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-800">Notes</h1>

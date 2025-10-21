@@ -23,6 +23,8 @@ export default function Dashboard() {
     .filter(r => !r.isCompleted)
     .slice(0, 3);
 
+  console.log('Dashboard rendering - Current URL:', window.location.pathname);
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
@@ -42,6 +44,10 @@ export default function Dashboard() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Debug indicator */}
+        <div className="bg-blue-100 border border-blue-300 text-blue-800 px-4 py-2 rounded-lg mb-6 text-center font-medium">
+          📍 You are currently on the <strong>DASHBOARD</strong> - This is the main page with overview and stats
+        </div>
         {/* Welcome Section */}
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 mb-8 border border-white/20">
           <div className="text-center">
