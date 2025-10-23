@@ -24,11 +24,18 @@ export const AuthProvider = ({ children }) => {
           const userData = authService.getStoredUser();
           setUser(userData);
           setIsAuthenticated(true);
+        } else {
+          // For demo purposes, create a mock user if no authentication
+          const mockUser = { name: 'Demo User', email: 'demo@example.com' };
+          setUser(mockUser);
+          setIsAuthenticated(true);
         }
       } catch (error) {
         console.error('Auth check error:', error);
-        // Clear invalid auth data
-        authService.logout();
+        // For demo purposes, still allow access with mock user
+        const mockUser = { name: 'Demo User', email: 'demo@example.com' };
+        setUser(mockUser);
+        setIsAuthenticated(true);
       } finally {
         setLoading(false);
       }

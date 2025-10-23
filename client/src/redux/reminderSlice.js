@@ -1,7 +1,32 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  reminders: [],
+  reminders: [
+    {
+      id: '1',
+      title: 'Explore the App',
+      description: 'Take some time to explore all the features of NotesApp',
+      dueDate: new Date(Date.now() + 86400000).toISOString().split('T')[0], // Tomorrow
+      dueTime: '10:00',
+      priority: 'medium',
+      category: 'personal',
+      isCompleted: false,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    },
+    {
+      id: '2',
+      title: 'Create Your First Note',
+      description: 'Try creating your own note using the Notes page',
+      dueDate: new Date().toISOString().split('T')[0], // Today
+      dueTime: '14:00',
+      priority: 'high',
+      category: 'general',
+      isCompleted: false,
+      createdAt: new Date(Date.now() - 3600000).toISOString(), // 1 hour ago
+      updatedAt: new Date(Date.now() - 3600000).toISOString(),
+    }
+  ],
   loading: false,
   error: null,
 };
