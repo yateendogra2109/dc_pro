@@ -1,8 +1,34 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  shortNotes: [],
-  longNotes: [],
+  shortNotes: [
+    {
+      id: '1',
+      title: 'Welcome to NotesApp!',
+      content: 'This is your first short note. You can create, edit, and delete notes easily.',
+      category: 'general',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    },
+    {
+      id: '2',
+      title: 'Quick Reminder',
+      content: 'Don\'t forget to check out all the different pages using the navigation above!',
+      category: 'personal',
+      createdAt: new Date(Date.now() - 86400000).toISOString(), // 1 day ago
+      updatedAt: new Date(Date.now() - 86400000).toISOString(),
+    }
+  ],
+  longNotes: [
+    {
+      id: '1',
+      title: 'Getting Started Guide',
+      content: 'Welcome to NotesApp! This application helps you manage your notes and reminders efficiently.\n\nFeatures:\n- Create short and long notes\n- Set reminders with due dates\n- Organize by categories\n- View recent activity\n\nNavigation:\nUse the navigation bar above to switch between different sections of the app.',
+      category: 'general',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    }
+  ],
   loading: false,
   error: null,
 };

@@ -19,6 +19,10 @@ export default function RemindersPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
+      {/* Debug indicator */}
+      <div className="bg-yellow-100 border border-yellow-300 text-yellow-800 px-4 py-2 rounded-lg mb-6 text-center font-medium">
+        📍 You are currently on the <strong>REMINDERS PAGE</strong> - Use the navigation above to go to Dashboard, Notes, etc.
+      </div>
       <div className="flex justify-between items-center mb-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-800">Reminders</h1>
